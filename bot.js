@@ -15,9 +15,7 @@ bot
                 if (room && isMentionSelf) {
                     msg.say('富哥等一哈');
                     const sendText = text.replace('@铲车司机bot', '');
-                    // const res = await sendGpt(sendText);
                     const res = await sendGpt(sendText);
-                    console.log('res.code', res);
                     if (res.code === '200') {
                         msg.say(res.answer);
                     }
