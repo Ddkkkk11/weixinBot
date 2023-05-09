@@ -1,6 +1,6 @@
-const {axios} = require('axios');
+const { axios } = require('axios');
 const sendGpt = ( msg ) => {
-    return axios.get(`https://www.heblogs.cn/caonm/ai/o.php?msg=$(msg}&type=`)
+    return axios.get(`https://www.heblogs.cn/caonm/ai/o.php?msg=${msg}&type=`)
         .then(res => {
             return Promise.resolve(res.data);
         }).catch(err => {
